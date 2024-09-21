@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jack Eckersley">
-    <meta name="discription" content="Whis is for my first assignment of the WDD231">
+    <meta name="description" content="This is for my first assignment of the WDD231">
     <title>WDD231 - Course Home Page - Jack Eckersley</title>
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts Embed -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
     <header>
         <h1>Jack Eckersley</h1>
     </header>
+
     <nav>
         <ul>
-            <li><a href="#https://www.linkedin.com/in/jj-frenzy-770b29284/">LinkedIn</a></li>
-            <li><a href="#https://byui.instructure.com/profile">Home</a></li>
-            <li><a href="#https://www.churchofjesuschrist.org/study/scriptures
-                ">Chamber</a></li>
-            <li><a href="#Final_Project">Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/jj-frenzy-770b29284/">LinkedIn</a></li>
+            <li><a href="https://byui.instructure.com/profile">Home</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Chamber</a></li>
+            <li><a href="https://github.com/jack-eckersley">GitHub Profile</a></li>
         </ul>
     </nav>
+
     <main>
         <section class="main-content">
             <h2>About Me</h2>
-            <p>I am a 22 year old republican just trying his best to understand one of the most confusing programs ever invented. I like playing video games, YuGiOh, and listening to music</p>
+            <p>I am a 22 year old republican just trying his best to understand one of the most confusing programs ever invented. I like playing video games, YuGiOh, and listening to music.</p>
         </section>
+
         <section class="main-content">
             <h2>This Is Me (not really(but really))</h2>
-            <p><img src="images/IMG_68B6F5EB3A8B-1.jpeg" alt="Custom_Picture" width="500"></p>
+            <p><img src="images/IMG_68B6F5EB3A8B-1.jpeg" alt="Custom Picture" width="500"></p>
         </section>
-        <section>
-            <h2> My Hobbies</h2>
-        </section>
+
         <section class="course-list">
-            <!-- Dynamically generated courses will appear here -->
+            <!-- Dynamic course content will go here -->
         </section>
+
         <div class="filter-buttons">
             <button id="all-btn">Show All Courses</button>
             <button id="cse-btn">Show CSE Courses</button>
             <button id="wdd-btn">Show WDD Courses</button>
         </div>
+
         <aside>
             <h2>Aside Section</h2>
             <p>This is the aside section.</p>
         </aside>
     </main>
+
     <footer>
         <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper Utah</p>
-        <p>Last Modified</p>
+        <p id="lastModified">Last Modified: </p>
     </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="scripts/main.js" defer></script>
 </body>
+
 </html>

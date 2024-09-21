@@ -7,7 +7,7 @@
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -52,17 +52,35 @@ nav ul li a:hover {
 
 /* Main Content Styling */
 main {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: flex;
     gap: 20px;
     padding: 20px;
-    display: flex;
 }
 
 .main-content {
     flex: 3;
     padding: 20px;
     background: #f4f4f4;
+}
+
+.course-list {
+    flex: 3;
+    padding: 20px;
+}
+
+.course-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+}
+
+.course-card.completed {
+    background-color: #cce5cc; /* Completed courses */
+}
+
+.filter-buttons {
+    margin: 10px 0;
 }
 
 aside {
@@ -78,27 +96,4 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-}
-
-@font-face {
-    font-family: Playwright;
-    src: url(https://fonts.google.com/specimen/Playwrite+AU+QLD);
-}
-
-h1{
-    font-family: Playwright;
-}
-
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-}
-.course-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px 0;
-    background-color: #f4f4f4;
-}
-
-.course-card.completed {
-    background-color: #cce5cc; /* Completed courses have a distinct color */
 }

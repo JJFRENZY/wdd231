@@ -7,17 +7,8 @@ const setCurrentYear = () => {
 // Function to dynamically display last modified date
 const setLastModifiedDate = () => {
     const lastModified = document.lastModified;
-    const footer = document.querySelector('footer');
-    const lastModifiedParagraph = document.createElement('p');
-    lastModifiedParagraph.textContent = `Last Modified: ${lastModified}`;
-    footer.appendChild(lastModifiedParagraph);
+    document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
 };
-
-// Call the functions when the DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    setCurrentYear();
-    setLastModifiedDate();
-});
 
 // Array of course objects
 const courses = [
@@ -60,5 +51,9 @@ document.getElementById('all-btn').addEventListener('click', () => displayCourse
 document.getElementById('cse-btn').addEventListener('click', () => displayCourses('CSE'));
 document.getElementById('wdd-btn').addEventListener('click', () => displayCourses('WDD'));
 
-// Initial load of all courses
-document.addEventListener('DOMContentLoaded', () => displayCourses());
+// Initial load of all courses and set dates
+document.addEventListener('DOMContentLoaded', () => {
+    setCurrentYear();
+    setLastModifiedDate();
+    displayCourses();
+});
