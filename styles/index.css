@@ -76,7 +76,8 @@ main {
 }
 
 .course-card.completed {
-    background-color: #cce5cc; /* Completed courses */
+    background-color: #cce5cc;
+    /* Completed courses */
 }
 
 .filter-buttons {
