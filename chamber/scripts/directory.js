@@ -11,8 +11,8 @@ const setLastModifiedDate = () => {
 };
 
 // Fetch and display company data
-console.log('Fetching data from directory.json...');
-fetch('data/directory.json')
+console.log('Fetching data from members.json...');
+fetch('data/members.json')
     .then(response => {
         console.log('Response:', response);
         if (!response.ok) {
@@ -62,15 +62,17 @@ fetch('data/directory.json')
             companyCards.forEach(card => companiesContainer.appendChild(card));
         }
 
-        // Event listeners for view toggle buttons
+        // Event listeners for view buttons
         document.getElementById('grid-view-btn').addEventListener('click', displayGridView);
         document.getElementById('list-view-btn').addEventListener('click', displayListView);
 
-        // Default to grid view
+        // Initial display
         displayGridView();
     })
-    .catch(error => console.error('Error fetching company data:', error));
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
 
-// Call functions to set year and last modified date
+// Set current year and last modified date on page load
 setCurrentYear();
 setLastModifiedDate();
