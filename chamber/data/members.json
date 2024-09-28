@@ -1,56 +1,56 @@
 [
-  {
-      "name": "Tech Solutions",
-      "address": "1234 Innovation Blvd, Tech City",
-      "phone": "(555) 123-4567",
-      "website": "https://techsolutions.com",
-      "image": "tech_solutions.png",
-      "membership": 3,
-      "otherInfo": "Top-rated tech service provider"
-  },
-  {
-      "name": "Green Earth Corp",
-      "address": "5678 Green Way, Eco Town",
-      "phone": "(555) 234-5678",
-      "website": "https://greenearth.com",
-      "image": "green_earth.png",
-      "membership": 2,
-      "otherInfo": "Leading eco-friendly products manufacturer"
-  },
-  {
-      "name": "Skyline Financial",
-      "address": "9101 Finance Ave, Skyline City",
-      "phone": "(555) 345-6789",
-      "website": "https://skylinefinancial.com",
-      "image": "skyline_financial.png",
-      "membership": 1,
-      "otherInfo": "Financial services and consulting"
-  },
-  {
-      "name": "Oceanic Ventures",
-      "address": "1122 Ocean Drive, Marina Bay",
-      "phone": "(555) 456-7890",
-      "website": "https://oceanicventures.com",
-      "image": "oceanic_ventures.png",
-      "membership": 3,
-      "otherInfo": "Adventure and travel company"
-  },
-  {
-      "name": "Urban Bistro",
-      "address": "4321 Food Lane, Downtown",
-      "phone": "(555) 567-8901",
-      "website": "https://urbanbistro.com",
-      "image": "urban_bistro.png",
-      "membership": 2,
-      "otherInfo": "Gourmet dining experience"
-  },
-  {
-      "name": "Mountain Gear",
-      "address": "8765 Peak Road, Adventure Valley",
-      "phone": "(555) 678-9012",
-      "website": "https://mountaingear.com",
-      "image": "mountain_gear.png",
-      "membership": 1,
-      "otherInfo": "Outdoor equipment and apparel"
-  }
+    {
+        "name": "Google",
+        "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043",
+        "phone": "(650) 253-0000",
+        "website": "https://about.google/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png",
+        "membership": 2,
+        "otherInfo": "Leading technology company specializing in internet-related services and products."
+    },
+    {
+        "name": "Microsoft",
+        "address": "1 Microsoft Way, Redmond, WA 98052",
+        "phone": "(425) 882-8080",
+        "website": "https://www.microsoft.com/en-us/",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png",
+        "membership": 3,
+        "otherInfo": "Multinational technology company known for software, electronics, and personal computers."
+    },
+    {
+        "name": "Apple",
+        "address": "1 Apple Park Way, Cupertino, CA 95014",
+        "phone": "(408) 996-1010",
+        "website": "https://www.apple.com/",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAN6D3MaoWFSqboGZpHXxBZnqY4siyBKCX8g&s",
+        "membership": 1,
+        "otherInfo": "Renowned for its innovative products such as the iPhone, iPad, and Mac computers."
+    },
+    {
+        "name": "Amazon",
+        "address": "410 Terry Ave N, Seattle, WA 98109",
+        "phone": "(206) 266-1000",
+        "website": "https://www.amazon.com/",
+        "image": "https://www.fineprintart.com/images/blog/amazon-logo/amazon_logo_history_5.jpg",
+        "membership": 2,
+        "otherInfo": "E-commerce giant known for its online marketplace and cloud computing services."
+    },
+    {
+        "name": "IBM",
+        "address": "1 New Orchard Road, Armonk, NY 10504",
+        "phone": "(914) 499-1900",
+        "website": "https://www.ibm.com/it-infrastructure?utm_content=SRCWW&p1=Search&p4=43700074699066824&p5=p&p9=58700008222706455&gclid=Cj0KCQjwr9m3BhDHARIsANut04Y6JT5Lti579vMzHQ4IAv8AcOt5dnT82HieUr2f4J6bSxoOJvdUEE4aAvAfEALw_wcB&gclsrc=aw.ds",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/IBM_logo_in.jpg",
+        "membership": 1,
+        "otherInfo": "Multinational technology company specializing in computer hardware and software solutions."
+    },
+    {
+        "name": "Intel",
+        "address": "2200 Mission College Blvd, Santa Clara, CA 95054",
+        "phone": "(408) 765-8080",
+        "website": "https://www.intel.com/content/www/us/en/architecture-and-technology/vpro/active-management-technology/overview.html?cid=sem&source=sa360&campid=2024_ao_cbu_us_gmocoma_gmocrbu_awa_text-link_brand_broad_cd_HQ-vPro-Management_3500231769_google_b2b_is_non-pbm_intel&ad_group=Brand_vPro-Management_Management_Broad&intel_term=intel+asset+management&sa360id=43700079811827174&gad_source=1&gclid=Cj0KCQjwr9m3BhDHARIsANut04YWCe8c9UJcFBkrA1jzyzpTh-0D1iog0hJJGiu4PIe0C9aH7M6K078aAiaGEALw_wcB&gclsrc=aw.ds",
+        "image": "https://logos-world.net/wp-content/uploads/2021/09/Intel-Logo-2006-2020-700x394.png",
+        "membership": 3,
+        "otherInfo": "Leading manufacturer of semiconductor chips and processors for computers."
+    }
 ]

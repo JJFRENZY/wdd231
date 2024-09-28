@@ -48,6 +48,7 @@ fetch('data/members.json')
 
         // Function to display companies in grid view
         function displayGridView() {
+            console.log('Switching to Grid View');
             companiesContainer.innerHTML = '';
             companiesContainer.classList.remove('company-list');
             companiesContainer.classList.add('company-grid');
@@ -56,6 +57,7 @@ fetch('data/members.json')
 
         // Function to display companies in list view
         function displayListView() {
+            console.log('Switching to List View');
             companiesContainer.innerHTML = '';
             companiesContainer.classList.remove('company-grid');
             companiesContainer.classList.add('company-list');
