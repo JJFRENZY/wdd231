@@ -1,0 +1,56 @@
+[
+  {
+      "name": "Tech Solutions",
+      "address": "1234 Innovation Blvd, Tech City",
+      "phone": "(555) 123-4567",
+      "website": "https://techsolutions.com",
+      "image": "tech_solutions.png",
+      "membership": 3,
+      "otherInfo": "Top-rated tech service provider"
+  },
+  {
+      "name": "Green Earth Corp",
+      "address": "5678 Green Way, Eco Town",
+      "phone": "(555) 234-5678",
+      "website": "https://greenearth.com",
+      "image": "green_earth.png",
+      "membership": 2,
+      "otherInfo": "Leading eco-friendly products manufacturer"
+  },
+  {
+      "name": "Skyline Financial",
+      "address": "9101 Finance Ave, Skyline City",
+      "phone": "(555) 345-6789",
+      "website": "https://skylinefinancial.com",
+      "image": "skyline_financial.png",
+      "membership": 1,
+      "otherInfo": "Financial services and consulting"
+  },
+  {
+      "name": "Oceanic Ventures",
+      "address": "1122 Ocean Drive, Marina Bay",
+      "phone": "(555) 456-7890",
+      "website": "https://oceanicventures.com",
+      "image": "oceanic_ventures.png",
+      "membership": 3,
+      "otherInfo": "Adventure and travel company"
+  },
+  {
+      "name": "Urban Bistro",
+      "address": "4321 Food Lane, Downtown",
+      "phone": "(555) 567-8901",
+      "website": "https://urbanbistro.com",
+      "image": "urban_bistro.png",
+      "membership": 2,
+      "otherInfo": "Gourmet dining experience"
+  },
+  {
+      "name": "Mountain Gear",
+      "address": "8765 Peak Road, Adventure Valley",
+      "phone": "(555) 678-9012",
+      "website": "https://mountaingear.com",
+      "image": "mountain_gear.png",
+      "membership": 1,
+      "otherInfo": "Outdoor equipment and apparel"
+  }
+]
