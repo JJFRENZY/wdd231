@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jack Eckersley">
+    <meta name="description" content="This is for my first assignment of the WDD231">
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="directory">
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://static.wikia.nocookie.net/sonic/images/f/fe/Wisp_Purple.png/revision/latest?cb=20110513170335">
+    <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/">
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content="JJFRENZY directory Page.">
+    <meta property="og:site_name" content="JJFRENZY directory.">
+    <meta name="facebook:image:alt" content="Alt text for image">
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta property="fb:app_id" content="JJFRENZY" />
+    <meta name="twitter:site" content="@JJFRENZY">
+    <title>WDD231 - Course Home Page - Jack Eckersley</title>
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts Embed -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="directory.css">
+
+    <!-- Link to external ico file -->
+    <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+    <header>
+        <h1>Jack Eckersley</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/jj-frenzy-770b29284/">LinkedIn</a></li>
+            <li><a href="https://byui.instructure.com/profile">Home</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Chamber</a></li>
+            <li><a href="https://github.com/jack-eckersley">GitHub Profile</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="main-content">
+            <h2>About Me</h2>
+            <p>I am a 22 year old republican just trying his best to understand one of the most confusing programs ever invented. I like playing video games, YuGiOh, and listening to music.</p>
+        </section>
+
+        <section class="main-content">
+            <h2>This Is Me (not really(but really))</h2>
+            <p><img src="images/IMG_68B6F5EB3A8B-1.jpeg" alt="Custom Picture" width="500"></p>
+        </section>
+
+        <section class="course-list">
+            <!-- Dynamic course content will go here -->
+        </section>
+
+        <div class="filter-buttons">
+            <button id="all-btn">Show All Courses</button>
+            <button id="cse-btn">Show CSE Courses</button>
+            <button id="wdd-btn">Show WDD Courses</button>
+        </div>
+
+        <aside>
+            <h2>Aside Section</h2>
+            <p>This is the aside section.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper Utah</p>
+        <p id="lastModified">Last Modified: </p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="scripts/index.js" defer></script>
+</body>
+
+</html>
