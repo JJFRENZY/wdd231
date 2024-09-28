@@ -14,20 +14,20 @@ const setLastModifiedDate = () => {
 console.log('Fetching data from directory.json...');
 fetch('data/directory.json')
     .then(response => {
-        console.log('Response:', response); // Log the response
+        console.log('Response:', response);
         if (!response.ok) {
             throw new Error('Network response was not ok: ' + response.statusText);
         }
         return response.json();
     })
     .then(data => {
-        console.log('Data received:', data); // Log the data received
+        console.log('Data received:', data);
         const companiesContainer = document.getElementById('companies-container');
-        
+
         if (!data || data.length === 0) {
-            console.log('No companies found.'); // Check if data is empty
-            companiesContainer.innerHTML = '<p>No companies found.</p>'; // Notify user
-            return; // Exit early
+            console.log('No companies found.');
+            companiesContainer.innerHTML = '<p>No companies found.</p>';
+            return;
         }
 
         // Store company cards in a variable
@@ -48,7 +48,7 @@ fetch('data/directory.json')
 
         // Function to display companies in grid view
         function displayGridView() {
-            companiesContainer.innerHTML = ''; // Clear existing content
+            companiesContainer.innerHTML = '';
             companiesContainer.classList.remove('company-list');
             companiesContainer.classList.add('company-grid');
             companyCards.forEach(card => companiesContainer.appendChild(card));
@@ -56,7 +56,7 @@ fetch('data/directory.json')
 
         // Function to display companies in list view
         function displayListView() {
-            companiesContainer.innerHTML = ''; // Clear existing content
+            companiesContainer.innerHTML = '';
             companiesContainer.classList.remove('company-grid');
             companiesContainer.classList.add('company-list');
             companyCards.forEach(card => companiesContainer.appendChild(card));
@@ -70,3 +70,7 @@ fetch('data/directory.json')
         displayGridView();
     })
     .catch(error => console.error('Error fetching company data:', error));
+
+// Call functions to set year and last modified date
+setCurrentYear();
+setLastModifiedDate();
