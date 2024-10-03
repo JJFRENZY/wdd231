@@ -32,19 +32,21 @@ async function apiFetch() {
 // Function to display the weather data
 function displayResults(data) {
     // Display the current temperature
+    const currentTemp = document.getElementById('current-temp'); // Correctly get the element
     currentTemp.innerHTML = `${data.main.temp}&deg;C`; // Or &deg;F for imperial
 
     // Use the first weather event
     const weatherEvent = data.weather[0];
 
     // Set the weather icon
+    const weatherIcon = document.getElementById('weather-icon'); // Correctly get the element
     const iconsrc = `https://openweathermap.org/img/wn/${weatherEvent.icon}@2x.png`;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', weatherEvent.description);
 
     // Display the weather description
-    let desc = weatherEvent.description;
-    captionDesc.textContent = desc;
+    const captionDesc = document.querySelector('figcaption'); // Correctly get the element for caption
+    captionDesc.textContent = weatherEvent.description;
 }
 
 // Initial load: Set year, modified date, and call the weather API
