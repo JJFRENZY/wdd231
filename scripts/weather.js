@@ -11,7 +11,7 @@ const setLastModifiedDate = () => {
 };
 
 // OpenWeatherMap API URL with Trier, Germany coordinates and API key
-const url = 'https://api.openweathermap.org/data/3.0/onecall?lat=49.75035&lon=6.63950&exclude=hourly,daily&appid={ae255d9d24e9b4d43190606b4b9f09ce}';
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49.7499&lon=6.6371&units=metric&appid=ae255d9d24e9b4d43190606b4b9f09ce';
 
 // Function to fetch data from the OpenWeatherMap API
 async function apiFetch() {
