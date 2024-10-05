@@ -67,8 +67,16 @@ function displayMembers(data) {
     const filteredMembers = data.filter(member => member.membership === 3);
     filteredMembers.forEach(member => {
         const li = document.createElement('li');
-        li.textContent = member.name;
-        membersList.appendChild(li);
+        
+        // Create an anchor tag with the member's website
+        const anchor = document.createElement('a');
+        anchor.href = member.website; // Link to the member's website
+        anchor.textContent = member.name; // Display the member's name
+        anchor.target = "_blank"; // Open link in a new tab
+        anchor.rel = "noopener noreferrer"; // Security best practice
+
+        li.appendChild(anchor); // Add the anchor to the list item
+        membersList.appendChild(li); // Add the list item to the members list
     });
 }
 
