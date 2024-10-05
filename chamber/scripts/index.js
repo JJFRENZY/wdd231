@@ -62,14 +62,17 @@ async function fetchMembers() {
     }
 }
 
-function displayMembers(data) {
-    const membersList = document.getElementById('members');
-    const filteredMembers = data.filter(member => member.membership === 3);
-    filteredMembers.forEach(member => {
-        const li = document.createElement('li');
-        li.textContent = member.name;
-        membersList.appendChild(li);
-    });
+function displayWeather(data) {
+    const currentTemp = document.getElementById('current-temp');
+    currentTemp.innerHTML = `${data.list[0].main.temp}&deg;C`;
+
+    const weatherIcon = document.getElementById('weather-icon');
+    const weatherDesc = document.getElementById('weather-desc');
+    
+    if (data.list[0].weather[0].icon) {
+        weatherIcon.src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+        weatherDesc.textContent = data.list[0].weather[0].description;
+    }
 }
 
 // Initialize functions on DOM load
