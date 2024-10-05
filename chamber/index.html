@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" href="favicon.ico">
-
 </head>
-
 <body>
     <header>
         <h1>Jack Eckersley</h1>
@@ -42,11 +38,23 @@
 
     <h1>OpenWeatherMap.org API Test</h1>
     <main>
-        <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
-        <figure>
-            <img id="weather-icon" src="" alt="">
-            <figcaption></figcaption>
-        </figure>
+        <section>
+            <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </section>
+        
+        <section>
+            <h2>Three-Day Forecast</h2>
+            <div id="forecast"></div>
+        </section>
+
+        <section>
+            <h2>Members with Membership 3</h2>
+            <div id="member-list"></div>
+        </section>
     </main>
 
     <footer>
@@ -57,5 +65,4 @@
     <script src="scripts/index.js" defer></script>
     <script src="data/members.json" defer></script>
 </body>
-
 </html>

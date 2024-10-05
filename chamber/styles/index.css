@@ -58,8 +58,8 @@ main {
     padding: 20px;
 }
 
-main p {
-    font-size: 1.2rem;
+section {
+    margin-bottom: 20px;
 }
 
 figure {
@@ -67,6 +67,21 @@ figure {
 }
 
 figure img {
+    max-width: 100px;
+    height: auto;
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+.member {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.member-logo {
     max-width: 100px;
     height: auto;
 }
