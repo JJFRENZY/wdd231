@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jack Eckersley">
     <meta name="description" content="This is for my first assignment of the WDD231">
-    <meta property="og:title" content="Chamber of Commerce Directory">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/IMG_68B6F5EB3A8B-1.jpeg">
-    <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/chamber/index.html">
     <title>Weather API & JSON Display</title>
 
     <link rel="stylesheet" href="styles/index.css">
@@ -19,10 +15,17 @@
 <body>
     <header>
         <h1>Jack Eckersley - Weather and JSON Data</h1>
+        <nav>
+            <ul>
+                <li><a href="#current-weather">Current Weather</a></li>
+                <li><a href="#forecast">3-Day Forecast</a></li>
+                <li><a href="#members-list">Members List</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section>
+        <section id="current-weather">
             <h2>Current Weather in Trier, Germany</h2>
             <p>The current temperature is <span id="current-temp"></span></p>
             <figure>
@@ -43,8 +46,9 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Jack Eckersley. Draper, Utah</p>
+        <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper, Utah</p>
         <p id="lastModified">Last Modified: </p>
+        <p>For more information, visit my <a href="https://www.jackeckersley.com" target="_blank" rel="noopener noreferrer">personal website</a>.</p>
     </footer>
 
     <script src="scripts/index.js" defer></script>
