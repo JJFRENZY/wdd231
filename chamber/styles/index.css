@@ -66,3 +66,30 @@ footer {
     text-align: center;
     padding: 10px;
 }
+#main-nav {
+    background: #444;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */
+    padding: 0; /* Remove default padding */
+}
+
+#main-nav ul li {
+    margin: 0 15px; /* Space between links */
+}
+
+#main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#main-nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
