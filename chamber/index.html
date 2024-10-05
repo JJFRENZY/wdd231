@@ -1,59 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jack Eckersley">
     <meta name="description" content="This is for my first assignment of the WDD231">
-    <meta property="og:title" content="jj-frenzy-770b29284">
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://static.wikia.nocookie.net/sonic/images/f/fe/Wisp_Purple.png/revision/latest?cb=20110513170335">
-    <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/">
-    <meta property="og:description" content="JJFRENZY Index Page.">
-    <meta property="og:site_name" content="JJFRENZY Index.">
-    <meta name="twitter:image:alt" content="Alt text for image">
-    <meta property="fb:app_id" content="JJFRENZY" />
-    <meta name="twitter:site" content="@JJFRENZY">
-    <title>WDD231 - Course Home Page - Jack Eckersley</title>
+    <title>Weather API & JSON Display</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 </head>
+
 <body>
     <header>
-        <h1>Jack Eckersley</h1>
+        <h1>Jack Eckersley - Weather and JSON Data</h1>
     </header>
 
-    <nav id="main-nav">
-        <ul>
-            <li><a href="#home">📄 Home</a></li>
-            <li><a href="#discover">📄 Discover</a></li>
-            <li><a href="directory.html">📄 Directory</a></li>
-            <li><a href="#join">📄 Join</a></li>
-        </ul>
-    </nav>
-
-    <h1>OpenWeatherMap.org API Test</h1>
     <main>
         <section>
-            <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+            <h2>Current Weather in Trier, Germany</h2>
+            <p>The current temperature is <span id="current-temp"></span></p>
             <figure>
-                <img id="weather-icon" src="" alt="">
-                <figcaption></figcaption>
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <figcaption id="weather-desc"></figcaption>
             </figure>
         </section>
-        
-        <section>
-            <h2>Three-Day Forecast</h2>
-            <div id="forecast"></div>
+
+        <section id="forecast">
+            <h2>3-Day Weather Forecast</h2>
+            <div id="forecast-temp"></div>
         </section>
 
-        <section>
-            <h2>Members with Membership 3</h2>
-            <div id="member-list"></div>
+        <section id="members-list">
+            <h2>Membership 3 Members</h2>
+            <ul id="members"></ul>
         </section>
     </main>
 
@@ -63,6 +44,6 @@
     </footer>
 
     <script src="scripts/index.js" defer></script>
-    <script src="data/members.json" defer></script>
 </body>
+
 </html>

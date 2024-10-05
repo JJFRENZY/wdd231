@@ -11,102 +11,71 @@ const setLastModifiedDate = () => {
 };
 
 // OpenWeatherMap API URL with Trier, Germany coordinates and API key
-const apiKey = 'ae255d9d24e9b4d43190606b4b9f09ce';
-const lat = '49.7499';
-const lon = '6.6371';
-const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=49.7499&lon=6.6371&units=metric&appid=ae255d9d24e9b4d43190606b4b9f09ce';
 
-// Function to fetch and display current weather
-async function displayCurrentWeather() {
+// Fetch weather data and display current weather + 3-day forecast
+async function fetchWeather() {
     try {
-        const response = await fetch(currentWeatherUrl);
+        const response = await fetch(weatherUrl);
         if (response.ok) {
             const data = await response.json();
-            const currentTemp = document.getElementById('current-temp');
-            currentTemp.innerHTML = `${data.main.temp}&deg;C`;
-
-            const weatherEvent = data.weather[0];
-            const weatherIcon = document.getElementById('weather-icon');
-            const iconsrc = `https://openweathermap.org/img/wn/${weatherEvent.icon}@2x.png`;
-            weatherIcon.setAttribute('src', iconsrc);
-            weatherIcon.setAttribute('alt', weatherEvent.description);
-
-            const captionDesc = document.querySelector('figcaption');
-            captionDesc.textContent = weatherEvent.description;
+            displayWeather(data);
         } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-// Function to fetch and display three-day forecast
-async function displayForecast() {
-    try {
-        const response = await fetch(forecastUrl);
-        if (response.ok) {
-            const data = await response.json();
-            const forecastDiv = document.getElementById('forecast');
-            forecastDiv.innerHTML = ''; // Clear existing content
-
-            // Loop through data and display the first weather forecast for the next three days
-            for (let i = 0; i < 3; i++) {
-                const forecast = data.list[i * 8]; // Get forecast for every 24 hours (8 * 3-hour intervals)
-                const forecastItem = document.createElement('div');
-                forecastItem.innerHTML = `
-                    <h3>Day ${i + 1}</h3>
-                    <p>Temp: ${forecast.main.temp}&deg;C</p>
-                    <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="${forecast.weather[0].description}">
-                    <p>${forecast.weather[0].description}</p>
-                `;
-                forecastDiv.appendChild(forecastItem);
-            }
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-// Function to fetch members from JSON and display those with membership 3
-async function fetchMembers() {
-    try {
-        const response = await fetch('data/members.json');
-        if (response.ok) {
-            const members = await response.json();
-            displayMembers(members);
-        } else {
-            throw Error(await response.text());
+            throw new Error("Weather data fetch failed");
         }
     } catch (error) {
         console.error(error);
     }
 }
 
-// Function to display members with membership 3
-function displayMembers(members) {
-    const memberList = document.getElementById('member-list');
-    memberList.innerHTML = ''; // Clear existing content
+// Display weather info
+function displayWeather(data) {
+    const currentTemp = document.getElementById('current-temp');
+    currentTemp.innerHTML = `${data.list[0].main.temp}&deg;C`;
 
-    members.forEach(member => {
-        if (member.membership === 3) {
-            const memberDiv = document.createElement('div');
-            memberDiv.classList.add('member');
+    const weatherIcon = document.getElementById('weather-icon');
+    const weatherDesc = document.getElementById('weather-desc');
+    weatherIcon.src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+    weatherDesc.textContent = data.list[0].weather[0].description;
 
-            const name = document.createElement('h3');
-            name.textContent = member.name;
-            memberDiv.appendChild(name);
+    const forecastTemp = document.getElementById('forecast-temp');
+    for (let i = 0; i < 3; i++) {
+        const forecast = data.list[i * 8];  // Skip to every 8th item (24-hour intervals)
+        const div = document.createElement('div');
+        div.innerHTML = `<strong>Day ${i + 1}:</strong> ${forecast.main.temp}&deg;C`;
+        forecastTemp.appendChild(div);
+    }
+}
 
-            memberList.appendChild(memberDiv);
+// Fetch members data and display membership 3 members
+async function fetchMembers() {
+    try {
+        const response = await fetch('data/members.json');
+        if (response.ok) {
+            const data = await response.json();
+            displayMembers(data);
+        } else {
+            throw new Error("Members data fetch failed");
         }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function displayMembers(data) {
+    const membersList = document.getElementById('members');
+    const filteredMembers = data.filter(member => member.membership === 3);
+    filteredMembers.forEach(member => {
+        const li = document.createElement('li');
+        li.textContent = member.name;
+        membersList.appendChild(li);
     });
 }
 
-// Initialize the app
-window.onload = () => {
+// Initialize functions on DOM load
+document.addEventListener('DOMContentLoaded', () => {
     setCurrentYear();
     setLastModifiedDate();
-}
+    fetchWeather();
+    fetchMembers();
+});
