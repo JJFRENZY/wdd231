@@ -5,78 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jack Eckersley">
-    <meta name="description" content="Thank you page for Chamber of Commerce membership form">
-    <title>Thank You - Chamber of Commerce</title>
+    <meta name="description" content="Thank You for Joining the Chamber of Commerce">
+    
+    <title>Thank You</title>
     <link rel="stylesheet" href="styles/join.css">
-    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
         <h1>Thank You for Joining!</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#discover">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="#join">Join</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section class="thank-you-message">
-            <h2>We Appreciate Your Interest!</h2>
-            <p>Thank you for submitting your information. Here are the details you provided:</p>
-
-            <ul>
-                <li><strong>First Name:</strong> <span id="submittedFirstName"></span></li>
-                <li><strong>Last Name:</strong> <span id="submittedLastName"></span></li>
-                <li><strong>Email:</strong> <span id="submittedEmail"></span></li>
-                <li><strong>Mobile Number:</strong> <span id="submittedMobileNumber"></span></li>
-                <li><strong>Business Organization Name:</strong> <span id="submittedBusinessName"></span></li>
-                <li><strong>Timestamp:</strong> <span id="submittedTimestamp"></span></li>
-            </ul>
-
-            <p>If there are any discrepancies or changes, please <a href="join.html">submit the form again</a>.</p>
-        </section>
+        <p>Your submission has been received.</p>
+        <h2>Submitted Information</h2>
+        <p><strong>First Name:</strong> <span id="firstNameDisplay"></span></p>
+        <p><strong>Last Name:</strong> <span id="lastNameDisplay"></span></p>
+        <p><strong>Title:</strong> <span id="titleDisplay"></span></p>
+        <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="mobileNumberDisplay"></span></p>
+        <p><strong>Business Organization Name:</strong> <span id="businessOrganizationNameDisplay"></span></p>
+        <p><strong>Description:</strong> <span id="descriptionDisplay"></span></p>
+        <p><strong>Membership Level:</strong> <span id="membershipLevelDisplay"></span></p>
     </main>
 
     <footer>
         <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper, Utah</p>
-        <p id="lastModified">Last Modified: </p>
     </footer>
 
     <script>
-        // Function to extract URL parameters and display them on the thank you page
-        const getFormData = () => {
+        // Function to display submitted information
+        const displaySubmittedInfo = () => {
             const urlParams = new URLSearchParams(window.location.search);
-            document.getElementById('submittedFirstName').textContent = urlParams.get('firstName');
-            document.getElementById('submittedLastName').textContent = urlParams.get('lastName');
-            document.getElementById('submittedEmail').textContent = urlParams.get('email');
-            document.getElementById('submittedMobileNumber').textContent = urlParams.get('mobileNumber');
-            document.getElementById('submittedBusinessName').textContent = urlParams.get('businessOrganizationName');
-            document.getElementById('submittedTimestamp').textContent = urlParams.get('timestamp');
+            document.getElementById("firstNameDisplay").innerText = urlParams.get('firstName');
+            document.getElementById("lastNameDisplay").innerText = urlParams.get('lastName');
+            document.getElementById("titleDisplay").innerText = urlParams.get('title');
+            document.getElementById("emailDisplay").innerText = urlParams.get('email');
+            document.getElementById("mobileNumberDisplay").innerText = urlParams.get('mobileNumber');
+            document.getElementById("businessOrganizationNameDisplay").innerText = urlParams.get('businessOrganizationName');
+            document.getElementById("descriptionDisplay").innerText = urlParams.get('description');
+            document.getElementById("membershipLevelDisplay").innerText = urlParams.get('membershipLevel');
         };
 
-        // Function to set the current year in the footer
+        // Set the current year in the footer
         const setCurrentYear = () => {
-            const currentYear = new Date().getFullYear();
-            document.getElementById('currentyear').textContent = currentYear;
+            document.getElementById("currentyear").innerText = new Date().getFullYear();
         };
 
-        // Function to dynamically display last modified date
-        const setLastModifiedDate = () => {
-            const lastModified = document.lastModified;
-            document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
+        // On load
+        window.onload = () => {
+            displaySubmittedInfo();
+            setCurrentYear();
         };
-
-        // Call functions to display form data and footer information
-        getFormData();
-        setCurrentYear();
-        setLastModifiedDate();
     </script>
 </body>
 
 </html>
-
