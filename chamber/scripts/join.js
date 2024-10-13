@@ -16,7 +16,29 @@ const setTimestamp = () => {
     document.getElementById('timestamp').value = now.toISOString();
 };
 
-// Set current year, last modified date, and timestamp on page load
-setCurrentYear();
-setLastModifiedDate();
-setTimestamp();
+// Modal Functionality
+const modals = document.querySelectorAll('.modal');
+const modalLinks = document.querySelectorAll('.modal-link');
+const closeModalButtons = document.querySelectorAll('.close');
+
+modalLinks.forEach((link, index) => {
+    link.addEventListener('click', () => {
+        modals[index].style.display = 'block';
+    });
+});
+
+closeModalButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.target.closest('.modal').style.display = 'none';
+    });
+});
+
+window.onclick = (event) => {
+    modals.forEach((modal) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+};
+
+// Set current year, last modified date, and timestamp on page

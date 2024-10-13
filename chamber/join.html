@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jack Eckersley">
     <meta name="description" content="This is for my first assignment of the WDD231">
-    <meta property="og:title" content="Chamber of Commerce Index">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/IMG_68B6F5EB3A8B-1.jpeg">
-    <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/chamber/index.html">
     <title>Join - Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/join.css">
     <link rel="icon" href="images/favicon.ico">
@@ -31,22 +27,22 @@
     <main>
         <form method="get" action="thankyou.html">
             <label for="firstName">First Name:</label>
-            <input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+            <input name="firstName" id="firstName" type="text" required autocomplete="given-name" />
 
             <label for="lastName">Last Name:</label>
-            <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+            <input name="lastName" id="lastName" type="text" required autocomplete="family-name" />
 
             <label for="title">Title:</label>
             <input name="title" id="title" type="text" autocomplete="organization-title" />
 
             <label for="email">Email:</label>
-            <input name="email" id="email" type="email" autocomplete="off" />
+            <input name="email" id="email" type="email" required autocomplete="off" />
 
             <label for="mobileNumber">Mobile Number:</label>
-            <input name="mobileNumber" id="mobileNumber" type="tel" autocomplete="tel" />
+            <input name="mobileNumber" id="mobileNumber" type="tel" required autocomplete="tel" />
 
             <label for="businessOrganizationName">Business Organization Name:</label>
-            <input name="businessOrganizationName" id="businessOrganizationName" type="text" autocomplete="organization" />
+            <input name="businessOrganizationName" id="businessOrganizationName" type="text" required autocomplete="organization" />
 
             <label for="membershipLevel">Membership Level:</label>
             <select name="membershipLevel" id="membershipLevel">
@@ -60,19 +56,71 @@
             <label for="description">Description:</label>
             <textarea name="description" id="description" rows="4" placeholder="Tell us a little about yourself or your business..."></textarea>
 
-            <!-- Hidden timestamp input -->
             <input type="hidden" name="timestamp" id="timestamp">
 
             <div>
                 <input type="submit" value="Submit" accesskey="s" />
             </div>
         </form>
+
+        <!-- Membership Cards -->
+        <section class="membership-cards">
+            <div class="card" id="np-member">
+                <h3>NP Membership</h3>
+                <p>Basic access to events and resources.</p>
+                <a href="#np-modal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card" id="bronze-member">
+                <h3>Bronze Membership</h3>
+                <p>Includes basic benefits plus discounts.</p>
+                <a href="#bronze-modal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card" id="silver-member">
+                <h3>Silver Membership</h3>
+                <p>Priority support and more features.</p>
+                <a href="#silver-modal" class="modal-link">Learn More</a>
+            </div>
+            <div class="card" id="gold-member">
+                <h3>Gold Membership</h3>
+                <p>All-inclusive package with exclusive benefits.</p>
+                <a href="#gold-modal" class="modal-link">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>NP Membership</h3>
+                <p>Details about NP Membership benefits...</p>
+            </div>
+        </div>
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Bronze Membership</h3>
+                <p>Details about Bronze Membership benefits...</p>
+            </div>
+        </div>
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Silver Membership</h3>
+                <p>Details about Silver Membership benefits...</p>
+            </div>
+        </div>
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Gold Membership</h3>
+                <p>Details about Gold Membership benefits...</p>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper, Utah</p>
         <p id="lastModified">Last Modified: </p>
-        <p>For more information, visit my <a href="https://www.jackeckersley.com" target="_blank" rel="noopener noreferrer">personal website</a>.</p>
     </footer>
 
     <script src="scripts/join.js" defer></script>

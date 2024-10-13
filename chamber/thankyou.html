@@ -4,25 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jack Eckersley">
+    <meta name="description" content="Thank you page for Chamber of Commerce membership form">
     <title>Thank You - Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/join.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
-        <h1>Thank You!</h1>
+        <h1>Thank You for Joining!</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#discover">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#join">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <p>Your information has been successfully submitted. We appreciate your interest in joining the Chamber of Commerce.</p>
-        <p><a href="join.html">Go back to Join Page</a></p>
+        <section class="thank-you-message">
+            <h2>We Appreciate Your Interest!</h2>
+            <p>Thank you for submitting your information. Here are the details you provided:</p>
+
+            <ul>
+                <li><strong>First Name:</strong> <span id="submittedFirstName"></span></li>
+                <li><strong>Last Name:</strong> <span id="submittedLastName"></span></li>
+                <li><strong>Email:</strong> <span id="submittedEmail"></span></li>
+                <li><strong>Mobile Number:</strong> <span id="submittedMobileNumber"></span></li>
+                <li><strong>Business Organization Name:</strong> <span id="submittedBusinessName"></span></li>
+                <li><strong>Timestamp:</strong> <span id="submittedTimestamp"></span></li>
+            </ul>
+
+            <p>If there are any discrepancies or changes, please <a href="join.html">submit the form again</a>.</p>
+        </section>
     </main>
 
     <footer>
         <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper, Utah</p>
+        <p id="lastModified">Last Modified: </p>
     </footer>
 
-    <script src="scripts/join.js" defer></script>
+    <script>
+        // Function to extract URL parameters and display them on the thank you page
+        const getFormData = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('submittedFirstName').textContent = urlParams.get('firstName');
+            document.getElementById('submittedLastName').textContent = urlParams.get('lastName');
+            document.getElementById('submittedEmail').textContent = urlParams.get('email');
+            document.getElementById('submittedMobileNumber').textContent = urlParams.get('mobileNumber');
+            document.getElementById('submittedBusinessName').textContent = urlParams.get('businessOrganizationName');
+            document.getElementById('submittedTimestamp').textContent = urlParams.get('timestamp');
+        };
+
+        // Function to set the current year in the footer
+        const setCurrentYear = () => {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentyear').textContent = currentYear;
+        };
+
+        // Function to dynamically display last modified date
+        const setLastModifiedDate = () => {
+            const lastModified = document.lastModified;
+            document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
+        };
+
+        // Call functions to display form data and footer information
+        getFormData();
+        setCurrentYear();
+        setLastModifiedDate();
+    </script>
 </body>
 
 </html>
+
