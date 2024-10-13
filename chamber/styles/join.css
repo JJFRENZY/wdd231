@@ -142,6 +142,6 @@ footer {
     padding: 10px 0;
 }
 form, .form-fields {
-    display: flex;
+    display: flex-start;
     flex-wrap: wrap;
   }
