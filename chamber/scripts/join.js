@@ -10,6 +10,13 @@ const setLastModifiedDate = () => {
     document.getElementById('lastModified').textContent = `Last Modified: ${lastModified}`;
 };
 
-// Set current year and last modified date on page load
+// Function to set the timestamp in the hidden input
+const setTimestamp = () => {
+    const now = new Date();
+    document.getElementById('timestamp').value = now.toISOString();
+};
+
+// Set current year, last modified date, and timestamp on page load
 setCurrentYear();
 setLastModifiedDate();
+setTimestamp();
