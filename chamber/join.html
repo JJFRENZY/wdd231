@@ -10,8 +10,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/IMG_68B6F5EB3A8B-1.jpeg">
     <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/chamber/index.html">
-    <title>Weather API & JSON Display</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <title>Join - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="icon" href="images/favicon.ico">
 </head>
 
@@ -20,16 +20,16 @@
         <h1>Chamber of Commerce</h1>
         <nav id="main-nav">
             <ul>
-                <li><a href="#home"> Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#discover">Discover</a></li>
-                <li><a href="#directory.html">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#join">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form>
+        <form method="get" action="thankyou.html">
             <label for="firstName">First Name:</label>
             <input name="firstName" id="firstName" type="text" autocomplete="given-name" />
 
@@ -37,27 +37,27 @@
             <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
 
             <label for="title">Title:</label>
-            <input name="lastName" id="title" type="text" autocomplete="organization-title" />
+            <input name="title" id="title" type="text" autocomplete="organization-title" />
 
             <label for="email">Email:</label>
             <input name="email" id="email" type="email" autocomplete="off" />
 
             <label for="mobileNumber">Mobile Number:</label>
-            <input name="lastName" id="lastName" type="tel" autocomplete="phone-number" />
+            <input name="mobileNumber" id="mobileNumber" type="tel" autocomplete="tel" />
 
             <label for="businessOrganizationName">Business Organization Name:</label>
-            <input name="lastName" id="lastName" type="text" autocomplete="business-name" />
+            <input name="businessOrganizationName" id="businessOrganizationName" type="text" autocomplete="organization" />
 
             <label for="membershipLevel">Membership Level:</label>
-            <select name="lastName" id="lastName" type="text" autocomplete="membership">
-                <option label="">--Please Select an Option--</option>
-                <option label="NPMember">NP Membership</option>
-                <option label="Bronze">Bronze</option>
-                <option label="Silver">Silver</option>
-                <option label="Gold">Gold</option>
+            <select name="membershipLevel" id="membershipLevel">
+                <option value="">--Please Select an Option--</option>
+                <option value="NPMember">NP Membership</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
             </select>
             <div>
-                <input type="submit" value="submit" accesskey="s" />
+                <input type="submit" value="Submit" accesskey="s" />
             </div>
         </form>
     </main>
@@ -68,7 +68,7 @@
         <p>For more information, visit my <a href="https://www.jackeckersley.com" target="_blank" rel="noopener noreferrer">personal website</a>.</p>
     </footer>
 
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </body>
 
 </html>
