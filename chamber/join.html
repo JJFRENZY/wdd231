@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jack Eckersley">
+    <meta name="description" content="This is for my first assignment of the WDD231">
+    <meta property="og:title" content="Chamber of Commerce Index">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/IMG_68B6F5EB3A8B-1.jpeg">
+    <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/chamber/index.html">
+    <title>Weather API & JSON Display</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home"> Home</a></li>
+                <li><a href="#discover">Discover</a></li>
+                <li><a href="#directory.html">Directory</a></li>
+                <li><a href="#join">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <label for="firstName">First Name:</label>
+        <input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+        <label for="lastName">Last Name:</label>
+        <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" autocomplete="off" />
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper, Utah</p>
+        <p id="lastModified">Last Modified: </p>
+        <p>For more information, visit my <a href="https://www.jackeckersley.com" target="_blank" rel="noopener noreferrer">personal website</a>.</p>
+    </footer>
+
+    <script src="scripts/index.js" defer></script>
+</body>
+
+</html>
