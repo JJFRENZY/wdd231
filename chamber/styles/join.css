@@ -141,7 +141,23 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-form, .form-fields {
-    display: flex-start;
-    flex-wrap: wrap;
-  }
+
+/* Form Styling */
+.form-section {
+    padding: 20px;
+    text-align: center; /* Center the form content */
+}
+
+.form-section label {
+    display: block; /* Ensure labels take full width */
+    margin: 10px 0; /* Add spacing above and below */
+    text-align: center; /* Center the text of the labels */
+}
+
+input, textarea, select {
+    width: 80%; /* Optional: adjust input widths */
+    margin: 10px 0; /* Add spacing around inputs */
+    padding: 8px; /* Add some padding for better appearance */
+    border: 1px solid #ccc; /* Add border for inputs */
+    border-radius: 4px; /* Round the corners of inputs */
+}
