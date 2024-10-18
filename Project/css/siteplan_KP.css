@@ -1,0 +1,199 @@
+/* Importing custom fonts */
+@font-face {
+    font-family: Matrix Regular Small Caps;
+    src: url(https://wisabo.com/item/3705/matrix-regular-small-caps/);
+}
+
+* {
+    font-family: Matrix Regular Small Caps;
+}
+
+@font-face {
+    font-family: Matrix Book;
+    src: url(https://wisabo.com/item/3696/matrix-book/);
+}
+
+* {
+    font-family: Matrix Book;
+}
+
+body {
+    font-family: 'Matrix', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #001f3f; /* Navy Blue */
+    color: #fff;
+}
+
+header {
+    background-color: #001f3f;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #001f3f;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #ff00b7;
+    text-decoration: none;
+}
+
+nav ul li a.gold {
+    color: #FFD700; /* Gold */
+}
+
+nav ul li a.silver {
+    color: #C0C0C0; /* Silver */
+}
+
+/* Add this block to underline links on hover */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    background-color: #333;
+    padding: 1em;
+    color: #ff00b7;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+}
+
+aside h2 {
+    margin: 0;
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center;
+}
+
+#hero {
+    background-color: #f4f4f4;
+    padding: 2em 1em;
+    text-align: center;
+    color: #001f3f;
+}
+
+.hero-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center;
+    gap: 2em;
+}
+
+.hero-content img {
+    max-height: 400px; /* Limit the height of the image */
+    width: auto;
+}
+
+.deck-info {
+    max-width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space within the container */
+    height: 400px; /* Match the image height */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+.deck-info h2 {
+    margin-top: 0;
+}
+
+.deck-info h3 {
+    margin-top: 1em;
+}
+
+.deck-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.deck-info ul li {
+    margin-bottom: 0.5em;
+}
+
+#features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 1em;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    background-color: #e2e2e2;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    color: #001f3f;
+    box-sizing: border-box;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #001f3f;
+    color: #ff00b7;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Media Query for responsive layout */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    #features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+
+    #hero {
+        padding: 1em 0.5em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content img, .deck-info {
+        max-width: 90%;
+    }
+
+    aside {
+        padding: 1em;
+        text-align: center;
+    }
+}
