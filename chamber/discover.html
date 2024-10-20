@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jack Eckersley">
+    <meta name="description" content="Chamber of Commerce">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/IMG_68B6F5EB3A8B-1.jpeg">
+    <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/chamber/directory.html">
+
+    <title>Company Directory</title>
+    <link rel="stylesheet" href="styles/directory.css">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts Embed -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to external ico file -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">📄 Home</a></li>
+                <li><a href="#discover">📄 Discover</a></li>
+                <li><a href="#directory">📄 Directory</a></li>
+                <li><a href="#join">📄 Join</a></li>
+            </ul>
+        </nav>
+        <nav id="view-toggle">
+            <ul>
+                <li><button id="grid-view-btn">Grid View</button></li>
+                <li><button id="list-view-btn">List View</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="companies-container" class="company-grid">
+            <!-- Company cards will be injected here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Jack Eckersley. Draper Utah</p>
+        <p id="lastModified">Last Modified: </p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script src="scripts/directory.js"></script>
+</body>
+</html>
