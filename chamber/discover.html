@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jack Eckersley">
-    <meta name="description" content="This is for my first assignment of the WDD231">
-    <meta property="og:title" content="Chamber of Commerce Index">
+    <meta name="description" content="Discover page for Chamber of Commerce">
+    <meta property="og:title" content="Chamber of Commerce - Discover">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/IMG_68B6F5EB3A8B-1.jpeg">
     <meta property="og:url" content="https://jjfrenzy.github.io/wdd231/chamber/discover.html">
     <title>Discover - Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="icon" href="images/favicon.ico">
 </head>
 
@@ -20,33 +20,48 @@
         <h1>Chamber of Commerce</h1>
         <nav id="main-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chamber/discover.html">Discover</a></li>
-                <li><a href="chamber/directory.html">Directory</a></li>
-                <li><a href="chamber/join.html">Join</a></li>
+                <li><a href="#home"> Home</a></li>
+                <li><a href="#discover">Discover</a></li>
+                <li><a href="#directory.html">Directory</a></li>
+                <li><a href="#join">Join</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="discover-layout">
+    <main>
         <aside class="sidebar">
-            <h2>Visitor Information</h2>
-            <p class="visitor-message"></p>
-            <h2>Events & Attractions</h2>
-            <ul>
-                <li>Annual Festival - November</li>
-                <li>Local Farmers Market - Every Saturday</li>
-                <li>Historical Museum Tours - Daily</li>
-            </ul>
+            <h2>Welcome Back!</h2>
+            <p id="visitor-message"></p>
         </aside>
 
-        <section class="image-gallery">
-            <h2>Local Highlights</h2>
-            <figure>
-                <img src="images/photo1.jpg" alt="Beautiful Park" loading="lazy">
-                <figcaption>Beautiful Park</figcaption>
-            </figure>
-            <!-- Repeat for five more images, all with lazy loading -->
+        <section class="gallery">
+            <h2>Featured Business Extensions</h2>
+            <div class="image-grid">
+                <figure>
+                    <img src="images/IMG_Plane.png" data-src="../images/photo1.jpg" alt="Scenic view of the river" class="lazy">
+                    <figcaption>Airlines</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG_Taxi.png" data-src="../images/photo2.jpg" alt="Historic building in town" class="lazy">
+                    <figcaption>Taxi Service</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG_Cook.png" data-src="../images/photo3.jpg" alt="Town square at sunset" class="lazy">
+                    <figcaption>Restaurant</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG_Money.jpg" data-src="../images/photo4.jpg" alt="City park with blooming flowers" class="lazy">
+                    <figcaption>Banking</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG_Lawnmower.jpg" data-src="../images/photo5.jpg" alt="Popular local cafe" class="lazy">
+                    <figcaption>Lawn Service</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/IMG_Garbage.jpg" data-src="../images/photo6.jpg" alt="Outdoor market on a sunny day" class="lazy">
+                    <figcaption>Garbage Pickup</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
@@ -56,7 +71,8 @@
         <p>For more information, visit my <a href="https://www.jackeckersley.com" target="_blank" rel="noopener noreferrer">personal website</a>.</p>
     </footer>
 
-    <script src="scripts/discover.js" defer></script>
+    <script src="../scripts/discover.js" defer></script>
 </body>
 
 </html>
+
