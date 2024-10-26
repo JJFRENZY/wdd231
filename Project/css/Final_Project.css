@@ -1,23 +1,27 @@
 /* Importing custom fonts */
 @font-face {
-    font-family: 'Matrix Regular Small Caps';
+    font-family: Matrix Regular Small Caps;
     src: url(https://wisabo.com/item/3705/matrix-regular-small-caps/);
 }
 
+* {
+    font-family: Matrix Regular Small Caps;
+}
+
 @font-face {
-    font-family: 'Matrix Book';
+    font-family: Matrix Book;
     src: url(https://wisabo.com/item/3696/matrix-book/);
 }
 
-/* Global styles */
 * {
-    font-family: 'Matrix Book', Arial, sans-serif; /* Apply Matrix Book font globally */
-    box-sizing: border-box; /* Ensure consistent box sizing */
+    font-family: Matrix Book;
 }
 
 body {
+    font-family: 'Matrix', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: #001f3f; /* Navy Blue */
     color: #fff;
 }
@@ -54,7 +58,7 @@ nav ul li a.silver {
     color: #C0C0C0; /* Silver */
 }
 
-/* Underline links on hover */
+/* Add this block to underline links on hover */
 nav ul li a:hover {
     text-decoration: underline;
 }
@@ -68,6 +72,7 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     overflow-x: auto; /* Allow horizontal scroll if needed */
 }
 
@@ -153,6 +158,22 @@ footer {
     padding: 1em 0;
 }
 
+/* Classes for color changes */
+.color-cyber-dragon h2,
+.color-cyber-dragon footer {
+    color: #C0C0C0; /* Silver for Cyber Dragon */
+}
+
+.color-eldlich h2,
+.color-eldlich footer {
+    color: #FFD700; /* Gold for Eldlich */
+}
+
+.color-kaito-pair h2,
+.color-kaito-pair footer {
+    color: #ff00b7; /* Pink for Kaito Pair */
+}
+
 /* Media Query for responsive layout */
 @media (max-width: 768px) {
     nav ul {
@@ -183,8 +204,7 @@ footer {
         align-items: center;
     }
 
-    .hero-content img,
-    .deck-info {
+    .hero-content img, .deck-info {
         max-width: 90%;
     }
 
