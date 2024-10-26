@@ -80,59 +80,88 @@ function displayDeckContent(deck) {
     } else if (deck === 'eldlich-conqueror') {
         content = `
         <aside>
-            <h2>Eldlich the Conqueror</h2>
+        <h2>Eldlich the Conqueror</h2>
+    </aside>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <img src="images/TTD_EC_DB.png" alt="Eldlich Deck Box">
+                <div class="deck-info">
+                    <h2>Main Deck</h2>
+                    <h3>Monsters</h3>
+                    <ul>
+                        <li>3x Eldlich the Golden Lord</li>
+                        <li>Doomking Balderoch</li>
+                        <li>Necroworld Banshee</li>
+                        <li>2x Ash Blossom & Joyous Spring</li>
+                    </ul>
+                    <h3>Spells</h3>
+                    <ul>
+                        <li>2x Cursed Eldland</li>
+                        <li>3x Eldlixir of Black Awakening</li>
+                        <li>Eldlixir of White Destiny</li>
+                        <li>Zombie World</li>
+                        <li>Pot of Extravagance</li>
+                        <li>Pot of Prosperity</li>
+                        <li>Foolish Burial</li>
+                        <li>Foolish Burial Goods</li>
+                        <li>Lightning Storm</li>
+                        <li>Cosmic Cyclone</li>
+                    </ul>
+                    <h3>Traps</h3>
+                    <ul>
+                        <li>3x Eldlixir of Scarlet Sanguine</li>
+                        <li>2x Conquistador of the Golden Land</li>
+                        <li>2x Huaquero of the Golden Land</li>
+                        <li>Golden Land Forever!</li>
+                        <li>Solemn Judgment</li>
+                        <li>Skill Drain</li>
+                        <li>Rivalry of Warlords</li>
+                        <li>Gozen Match</li>
+                        <li>There Can Be Only One</li>
+                        <li>Dogmatika Punishment</li>
+                        <li>2x Torrential Tribute</li>
+                        <li>2x Infinite Impermanence</li>
+                    </ul>
+                    <h3>Extra Deck</h3>
+                    <ul>
+                        <li>Elder Entity N'tss</li>
+                        <li>Garura, Wings of Resonant Life</li>
+                        <li>Constellar Pleiades</li>
+                        <li>Superdreadnought Rail Cannon Gustav Max</li>
+                        <li>Number 81: Superdreadnought Rail Cannon Super Dora</li>
+                        <li>Superdreadnought Rail Cannon Juggernaut Liebe</li>
+                        <li>Divine Arsenal AA-Zeus - Sky Thunder</li>
+                        <li>Link Spider</li>
+                        <li>Vampire Sucker</li>
+                        <li>Knightmare Phoenix</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <h2>Highlight Cards</h2>
         </aside>
-        <main>
-            <section id="hero">
-                <div class="hero-content">
-                    <img src="images/TTD_Eldlich_DB.png" alt="Eldlich Deck Box">
-                    <div class="deck-info">
-                        <h2>Main Deck</h2>
-                        <h3>Monsters</h3>
-                        <ul>
-                            <li>3x Eldlich the Golden Lord</li>
-                            <li>2x Ash Blossom & Joyous Spring</li>
-                            <li>2x Ghost Ogre & Snow Rabbit</li>
-                            <li>3x Golden Land Forever</li>
-                        </ul>
-                        <h3>Spells</h3>
-                        <ul>
-                            <li>3x Cursed Eldland</li>
-                            <li>2x Eldlixir of Black Awakening</li>
-                            <li>2x Eldlixir of White Destiny</li>
-                            <li>1x Harpie's Feather Duster</li>
-                        </ul>
-                        <h3>Traps</h3>
-                        <ul>
-                            <li>3x Conquistador of the Golden Land</li>
-                            <li>3x Huacachina of the Golden Land</li>
-                            <li>2x Infinite Impermanence</li>
-                        </ul>
-                        <h3>Extra Deck</h3>
-                        <ul>
-                            <li>2x Linkuriboh</li>
-                            <li>2x Predaplant Verte Anaconda</li>
-                            <li>1x Accesscode Talker</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <aside>
-                <h2>Highlight Cards</h2>
-            </aside>
-            <section id="features">
-                <div class="feature">
-                    <h3><img src="images/TTD_Eldlich_Best_Card.png" alt="Eldlich Best Card"></h3>
-                </div>
-                <div class="feature">
-                    <h3><img src="images/TTD_Eldlich_Golden_Lord.png" alt="Eldlich Golden Lord"></h3>
-                </div>
-            </section>
-        </main>`;
+        <section id="features">
+            <div class="feature">
+                <h3><img src="images/TTD_EC_Cursed_Eldland.png" alt="Cursed Eldland"></h3>
+
+            </div>
+            <div class="feature">
+                <h3><img src="images/TTD_EC_Eldlich_the_Golden_Lord.png" alt="Eldlich the Golden Lord"></h3>
+
+            </div>
+            <div class="feature">
+                <h3><img src="images/TTD_EC_Eldlixir_of_Scarlet_Sanguine.png" alt="Eldlixir of Scarlet Sanguine"></h3>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+`;
     } else if (deck === 'cyber-dragon') {
         content = `
-        <aside>
-            <h2>Decisive Strike Cyber Dragon</h2>
         </aside>
         <main>
             <section id="hero">
@@ -155,22 +184,38 @@ function displayDeckContent(deck) {
                         </ul>
                         <h3>Spells</h3>
                         <ul>
-                            <li>3x Machine Duplication</li>
-                            <li>3x Power Bond</li>
-                            <li>1x Future Fusion</li>
-                            <li>1x Overload Fusion</li>
-                            <li>1x Harpie's Feather Duster</li>
+                            <li>2x Power Bond</li>
+                            <li>3x Cyber Emergency</li>
+                            <li>Cyber Repair Plant</li>
+                            <li>Cyberdark World</li>
+                            <li>Machine Duplication</li>
+                            <li>2x Clockwork Night</li>
+                            <li>Triple Tactic Talents</li>
+                            <li>Triple Tactic Thrust</li>
+                            <li>Sales Ban</li>
+                            <li>Raigeki</li>
+                            <li>Harpie's Feather Duster</li>
+                            <li>2x Lightning Storm</li>
+                            <li>2x Called by the Grave</li>
+                            <li>Forbidden Droplet</li>
                         </ul>
                         <h3>Traps</h3>
                         <ul>
-                            <li>3x Cybernetic Overflow</li>
-                            <li>2x Infinite Impermanence</li>
+                            <li>Red Reboot</li>
+                            <li>Infinite Impermanence</li>
                         </ul>
                         <h3>Extra Deck</h3>
                         <ul>
-                            <li>3x Chimeratech Mega Fleet Dragon</li>
-                            <li>2x Chimeratech Rampage Dragon</li>
-                            <li>1x Accesscode Talker</li>
+                            <li>Cyber End Dragon</li>
+                            <li>Cyber Twin Dragon</li>
+                            <li>Chimeratech Megafleet Dragon</li>
+                            <li>Chimeratech Fortress Dragon</li>
+                            <li>Chimeratech Rampage Dragon</li>
+                            <li>Cyber Dragon Nova</li>
+                            <li>Cyber Dragon Infinity</li>
+                            <li>Cyber Dragon Sieger</li>
+                            <li>Sky Striker Ace - Azalea</li>
+                            <li>Salamangreat Almiraj</li>
                         </ul>
                     </div>
                 </div>
@@ -180,13 +225,22 @@ function displayDeckContent(deck) {
             </aside>
             <section id="features">
                 <div class="feature">
-                    <h3><img src="images/TTD_CD_Best_Card.png" alt="Best Cyber Card"></h3>
+                    <h3><img src="images/TTD_CD_Power_Bond.png" alt="Power_Bond"></h3>
+    
                 </div>
                 <div class="feature">
-                    <h3><img src="images/TTD_CD_Cyber_Dragon.png" alt="Cyber Dragon"></h3>
+                    <h3><img src="images/TTD_CD_Cyber_End_Dragon.png" alt="Cyber End Dragon"></h3>
+    
+                </div>
+                <div class="feature">
+                    <h3><img src="images/TTD_CD_Infinite_Impermanence.png" alt="Infinite Impermanence"></h3>
+    
                 </div>
             </section>
-        </main>`;
+        </main>
+    </body>
+    </html>
+    `;
     }
 
     // Update the main content area with the selected deck's content
