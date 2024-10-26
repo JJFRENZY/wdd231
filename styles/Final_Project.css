@@ -1,0 +1,77 @@
+/* Importing custom fonts */
+@font-face {
+    font-family: 'Matrix Regular Small Caps';
+    src: url('https://wisabo.com/item/3705/matrix-regular-small-caps/');
+}
+
+@font-face {
+    font-family: 'Matrix Book';
+    src: url('https://wisabo.com/item/3696/matrix-book/');
+}
+
+body {
+    font-family: 'Matrix Book', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #001f3f; /* Navy Blue */
+    color: #fff;
+}
+
+header, nav, aside, footer {
+    background-color: #001f3f;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #001f3f;
+}
+
+nav ul li a {
+    color: #ff00b7;
+    text-decoration: none;
+}
+
+nav ul li a.gold {
+    color: #FFD700; /* Gold */
+}
+
+nav ul li a.silver {
+    color: #C0C0C0; /* Silver */
+}
+
+.hero-content {
+    display: flex;
+    gap: 2em;
+    padding: 2em 1em;
+}
+
+.hero-content img {
+    max-height: 400px;
+}
+
+.feature {
+    width: 30%;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #e2e2e2;
+    color: #001f3f;
+    box-sizing: border-box;
+}
+
+footer {
+    color: #C0C0C0;
+    padding: 1em 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
