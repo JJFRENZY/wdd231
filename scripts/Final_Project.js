@@ -1,77 +1,102 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const deckInfo = {
-        "kaito-pair": {
-            title: "Evil★Twin the Kaito Pair",
-            imgSrc: "images/TTD_KP_DB.png",
-            content: `
-                <h2>Main Deck</h2>
-                <h3>Monsters</h3>
-                <ul>
-                    <li>Evil Twins Ki-sikil & Lil-la</li>
-                    <li>3x Live Twin Ki-sikil</li>
-                    <!-- Add remaining cards here -->
-                </ul>
-                <h3>Spells</h3>
-                <ul>
-                    <li>Secret Password</li>
-                    <!-- Add remaining cards here -->
-                </ul>
-                <h3>Traps</h3>
-                <ul>
-                    <li>Evil Twin Challenge</li>
-                    <!-- Add remaining cards here -->
-                </ul>
-                <h3>Extra Deck</h3>
-                <ul>
-                    <li>2x Evil Twin Ki-sikil</li>
-                    <!-- Add remaining cards here -->
-                </ul>`,
-            features: `
-                <div class="feature"><img src="images/TTD_KP_Secret_Password.png" alt="Secret Password"></div>
-                <!-- Add more feature images -->
-            `
-        },
-        "eldlich": {
-            title: "Eldlich the Conqueror",
-            imgSrc: "images/TTD_EC_DB.png",
-            content: `
-                <h2>Main Deck</h2>
-                <h3>Monsters</h3>
-                <ul>
-                    <li>3x Eldlich the Golden Lord</li>
-                    <!-- Add remaining cards here -->
-                </ul>`,
-            features: `
-                <div class="feature"><img src="images/TTD_EC_Cursed_Eldland.png" alt="Cursed Eldland"></div>
-            `
-        },
-        "cyber-dragons": {
-            title: "Decisive Strike Cyber Dragon",
-            imgSrc: "images/TTD_CD_DB.png",
-            content: `
-                <h2>Main Deck</h2>
-                <h3>Monsters</h3>
-                <ul>
-                    <li>3x Cyber Dragon</li>
-                    <!-- Add remaining cards here -->
-                </ul>`,
-            features: `
-                <div class="feature"><img src="images/TTD_CD_Power_Bond.png" alt="Power Bond"></div>
-            `
-        }
-    };
-
-    document.getElementById("kaito-pair-link").addEventListener("click", () => swapDeck("kaito-pair"));
-    document.getElementById("eldlich-link").addEventListener("click", () => swapDeck("eldlich"));
-    document.getElementById("cyber-dragons-link").addEventListener("click", () => swapDeck("cyber-dragons"));
-
-    function swapDeck(deck) {
-        document.getElementById("deck-title").innerHTML = `<h2>${deckInfo[deck].title}</h2>`;
-        document.querySelector("#hero .hero-content img").src = deckInfo[deck].imgSrc;
-        document.querySelector(".deck-info").innerHTML = deckInfo[deck].content;
-        document.getElementById("features").innerHTML = deckInfo[deck].features;
-    }
-
-    // Default load - Cyber Dragon
-    swapDeck("cyber-dragons");
+document.getElementById("kaito-pair").addEventListener("click", function() {
+    document.body.innerHTML = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tactical-Try Yugioh Decks: Decklists and suggestions for Tactical-Try Decks.">
+        <meta name="author" content="Jack Eckersley">
+        <title>Tactical-Try Structure Decks</title>
+        <link rel="stylesheet" href="styles/siteplan_KP.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tactical-Try Yugioh Quick See Decks</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Evil★Twin the Kaito Pair</a></li>
+                <li><a href="#" class="gold">Eldlich the Conqueror</a></li>
+                <li><a href="#" class="silver">Decisive Strike Cyber Dragon</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <h2>Evil★Twin the Kaito Pair</h2>
+        </aside>
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <img src="images/TTD_KP_DB.png" alt="Kaito Pair Deck Box">
+                    <div class="deck-info">
+                        <h2>Main Deck</h2>
+                        <h3>Monsters</h3>
+                        <ul>
+                            <li>Evil Twins Ki-sikil & Lil-la</li>
+                            <li>3x Live Twin Ki-sikil</li>
+                            <li>3x Live Twin Lil-la</li>
+                            <li>Live Twin Ki-sikil Frost</li>
+                            <li>Live Twin Lil-la Treat</li>
+                            <li>Spright Blue</li>
+                            <li>Spright Jet</li>
+                            <li>Spright Red</li>
+                            <li>Spright Carrot</li>
+                            <li>EM:P Gremeowade</li>
+                            <li>Ash Blossom & Joyous Spring</li>
+                            <li>Maxx C</li>
+                        </ul>
+                        <h3>Spells</h3>
+                        <ul>
+                            <li>Secret Password</li>
+                            <li>Live Twin Entrance</li>
+                            <li>3x Live Twin Sunny's Snitch</li>
+                            <li>Spright Starter</li>
+                            <li>Spright Smasher</li>
+                            <li>Spright Gamma Burst</li>
+                            <li>Harpie's Feather Duster</li>
+                            <li>Cosmic Cyclone</li>
+                            <li>2x Called by the Grave</li>
+                            <li>Crossout Designator</li>
+                            <li>Forbidden Droplet</li>
+                        </ul>
+                        <h3>Traps</h3>
+                        <ul>
+                            <li>Evil Twin Challenge</li>
+                            <li>Spright Double Cross</li>
+                            <li>2x Infinite Impermanence</li>
+                        </ul>
+                        <h3>Extra Deck</h3>
+                        <ul>
+                            <li>2x Evil Twin Ki-sikil</li>
+                            <li>2x Evil Twin Lil-la</li>
+                            <li>Evil Twin's Trouble Sunny</li>
+                            <li>I:P Masquerena</li>
+                            <li>Knightmare Unicorn</li>
+                            <li>Accesscode Talker</li>
+                            <li>Gigantic Spright</li>
+                            <li>Sky Calvary Centaurea</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <h2>Highlight Cards</h2>
+            </aside>
+            <section id="features">
+                <div class="feature">
+                    <h3><img src="images/TTD_KP_Secret_Password.png" alt="Secret Password"></h3>
+                </div>
+                <div class="feature">
+                    <h3><img src="images/TTD_KP_Evil★Twins_Ki-sikil & Lil-la.png" alt="Evil★Twins Ki-sikil & Lil-la"></h3>
+                </div>
+                <div class="feature">
+                    <h3><img src="images/TTD_KP_Evil★Twin_Challenge.png" alt="Evil★Twin Challenge"></h3>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Jack Eckersley</p>
+        </footer>
+    </body>
+    </html>`;
 });
