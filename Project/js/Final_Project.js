@@ -162,6 +162,8 @@ function displayDeckContent(deck) {
 `;
     } else if (deck === 'cyber-dragon') {
         content = `
+        <aside>
+            <h2>Decisive Strike Cyber Dragon</h2>
         </aside>
         <main>
             <section id="hero">
