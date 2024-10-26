@@ -264,3 +264,38 @@ document.getElementById('cyber-dragon').addEventListener('click', function(e) {
     e.preventDefault();
     displayDeckContent('cyber-dragon');
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // Function to change colors based on clicked card
+    function changeColor(cardType) {
+        const body = document.body;
+
+        // Remove existing color classes
+        body.classList.remove("color-cyber-dragon", "color-eldlich", "color-kaito-pair");
+
+        // Add new color class based on the clicked card
+        if (cardType === 'Cyber Dragon') {
+            body.classList.add("color-cyber-dragon");
+        } else if (cardType === 'Eldlich') {
+            body.classList.add("color-eldlich");
+        } else if (cardType === 'Kaito Pair') {
+            body.classList.add("color-kaito-pair");
+        }
+    }
+
+    // Event listeners for membership cards
+    const cyberDragonCard = document.getElementById("cyber-dragon-card");
+    const eldlichCard = document.getElementById("eldlich-card");
+    const kaitoPairCard = document.getElementById("kaito-pair-card");
+
+    if (cyberDragonCard) {
+        cyberDragonCard.addEventListener("click", () => changeColor('Cyber Dragon'));
+    }
+
+    if (eldlichCard) {
+        eldlichCard.addEventListener("click", () => changeColor('Eldlich'));
+    }
+
+    if (kaitoPairCard) {
+        kaitoPairCard.addEventListener("click", () => changeColor('Kaito Pair'));
+    }
+});
