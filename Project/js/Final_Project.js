@@ -155,29 +155,22 @@ function displayDeckContent(deck) {
                         </ul>
                         <h3>Spells</h3>
                         <ul>
-                            <li>2x Power Bond</li>
-                            <li>3x Cyber Emergency</li>
-                            <li>Cyber Repair Plant</li>
-                            <li>Cyberdark World</li>
-                            <li>Machine Duplication</li>
-                            <li>2x Clockwork Night</li>
-                            <li>Triple Tactic Talents</li>
-                            <li>Triple Tactic Thrust</li>
-                            <li>Sales Ban</li>
-                            <li>Raigeki</li>
-                            <li>Harpie's Feather Duster</li>
+                            <li>3x Machine Duplication</li>
+                            <li>3x Power Bond</li>
+                            <li>1x Future Fusion</li>
+                            <li>1x Overload Fusion</li>
+                            <li>1x Harpie's Feather Duster</li>
                         </ul>
                         <h3>Traps</h3>
                         <ul>
-                            <li>3x Infinite Impermanence</li>
+                            <li>3x Cybernetic Overflow</li>
+                            <li>2x Infinite Impermanence</li>
                         </ul>
                         <h3>Extra Deck</h3>
                         <ul>
-                            <li>3x Cyber Twin Dragon</li>
-                            <li>2x Cyber Twin Dragon</li>
+                            <li>3x Chimeratech Mega Fleet Dragon</li>
                             <li>2x Chimeratech Rampage Dragon</li>
-                            <li>Cyber Dragon Infinity</li>
-                            <li>Cyber Dragon Nova</li>
+                            <li>1x Accesscode Talker</li>
                         </ul>
                     </div>
                 </div>
@@ -187,7 +180,7 @@ function displayDeckContent(deck) {
             </aside>
             <section id="features">
                 <div class="feature">
-                    <h3><img src="images/TTD_CD_Best_Card.png" alt="Cyber Dragon Best Card"></h3>
+                    <h3><img src="images/TTD_CD_Best_Card.png" alt="Best Cyber Card"></h3>
                 </div>
                 <div class="feature">
                     <h3><img src="images/TTD_CD_Cyber_Dragon.png" alt="Cyber Dragon"></h3>
@@ -196,22 +189,22 @@ function displayDeckContent(deck) {
         </main>`;
     }
 
-    // Update the main content
-    document.getElementById("content").innerHTML = content;
+    // Update the main content area with the selected deck's content
+    document.getElementById('content').innerHTML = content;
 }
 
-// Event listeners for each navigation link
-document.getElementById("kaito-pair").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default link behavior
+// Event listeners for each deck link
+document.getElementById('kaito-pair').addEventListener('click', function(e) {
+    e.preventDefault();
     displayDeckContent('kaito-pair');
 });
 
-document.getElementById("eldlich-conqueror").addEventListener("click", function(event) {
-    event.preventDefault();
+document.getElementById('eldlich-conqueror').addEventListener('click', function(e) {
+    e.preventDefault();
     displayDeckContent('eldlich-conqueror');
 });
 
-document.getElementById("cyber-dragon").addEventListener("click", function(event) {
-    event.preventDefault();
+document.getElementById('cyber-dragon').addEventListener('click', function(e) {
+    e.preventDefault();
     displayDeckContent('cyber-dragon');
 });
